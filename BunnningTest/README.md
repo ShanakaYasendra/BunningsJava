@@ -1,65 +1,68 @@
-# Cucumber-Java-JUnit Archetype
+#Testing Challenge 1 - Automation Test Analyst
+A testing challenge to be solved as part of a screening process
 
-This is the simplest possible build script setup for Cucumber using Java.
-There is nothing fancy like a webapp or browser testing. All this does is to show you how
-to install and run Cucumber!
+#Context
+You are the quality analyst / engineer for a team at Bunnings.
+You are retrofitting some testing procedures on the now live website.
+Challenge
+You are to design test cases and a test tracking plan for the newly rolled out search and results features on this site, the feature in question is outlined on this screenshot
+Identify and document your testing strategy and approach to testing this application in an Agile development environment
+List down any assumptions and questions you have about the brief
+Design and document test cases for this feature as it appears on the site
+Apply test automation to this feature outline the approach and tools you will use _
+Write test automation scripts for your top 3 test cases
+#Deliverables:
+Spend as little or as much time as you like ⌚ on the challenge, please record the total time you spend on this and include it in your response
+The code you produce can be in any language ⭐
+If you complete the automation part of the challenge output of the efforts ❗ must be committed back into a Public Repo(created by you) in Github and the URL shared back for review.
 
-## Usage
+# Bunning Search feature automation Challenge is done using 
+    ### Java
+    ### Cucumber
+    ### Selenium
+    ### Junit
+    ### chrome webdriver
+ ## Following test cases automated using BDD
+  
+  ### Scenario: Search for product category
+    Given Customer is on the Bunning Web site
+    When Customer enter "nails" to the search input
+    And click Search
+    Then results page should load
+    And results page should display "696 results for nails"
+    And "Our Range" Tab should display with results
+    And "Our Range" Tab heading should display "Our Range (688)"
+    And close the Browser
 
-Open a command window and run:
+ 
+  ### Scenario: Search for Services
+    Given Customer is on the Bunning Web site
+    When Customer enter "Key" to the search input
+    And select "Service" from the drop down
+    Then results page should load
+    And results page should display "494 results for keys"
+    And "Services" Tab should display with results
+    And "Services" Tab heading should display "Services (2)"
+    And close the Browser
 
-    mvn test
 
-This runs Cucumber features using Cucumber's JUnit runner. The `@RunWith(Cucumber.class)` annotation on the `RunCukesTest`
-class tells JUnit to kick off Cucumber.
-
-## Overriding options
-
-The Cucumber runtime parses command line options to know what features to run, where the glue code lives, what plugins to use etc.
-When you use the JUnit runner, these options are generated from the `@CucumberOptions` annotation on your test.
-
-Sometimes it can be useful to override these options without changing or recompiling the JUnit class. This can be done with the
-`cucumber.options` system property. The general form is:
-
-    mvn -Dcucumber.options="..." test
-
-Let's look at some things you can do with `cucumber.options`. Try this:
-
-    -Dcucumber.options="--help"
-
-That should list all the available options.
-
-*IMPORTANT*
-
-When you override options with `-Dcucumber.options`, you will completely override whatever options are hard-coded in
-your `@CucumberOptions` or in the script calling `cucumber.api.cli.Main`. There is one exception to this rule, and that
-is the `--plugin` option. This will not _override_, but _add_ a plugin. The reason for this is to make it easier
-for 3rd party tools (such as [Cucumber Pro](https://cucumber.pro/)) to automatically configure additional plugins by appending arguments to a `cucumber.properties`
-file.
-
-### Run a subset of Features or Scenarios
-
-Specify a particular scenario by *line* (and use the pretty plugin, which prints the scenario back)
-
-    -Dcucumber.options="classpath:skeleton/belly.feature:4 --plugin pretty"
-
-This works because Maven puts `./src/test/resources` on your `classpath`.
-You can also specify files to run by filesystem path:
-
-    -Dcucumber.options="src/test/resources/skeleton/belly.feature:4 --plugin pretty"
-
-You can also specify what to run by *tag*:
-
-    -Dcucumber.options="--tags @bar --plugin pretty"
-
-### Running only the scenarios that failed in the previous run
-
-    -Dcucumber.options="@target/rerun.txt"
-
-This works as long as you have the `rerun` formatter enabled.
-
-### Specify a different formatter:
-
-For example a JUnit formatter:
-
-    -Dcucumber.options="--plugin junit:target/cucumber-junit-report.xml"
+  ### Scenario: Search for DIY Advice
+    Given Customer is on the Bunning Web site
+    When Customer enter "Key" to the search input
+    And select "D.I.Y. Advice" from the drop down
+    Then results page should load
+    And results page should display "494 results for keys"
+    And "D.I.Y. Advice" Tab should display with results
+    And "D.I.Y. Advice" Tab heading should display "D.I.Y. Advice (15)"
+    And close the Browser
+    
+  ## Following Assumption used in the Automation
+    •	Customer knows how to navigate to the Bunnings Web site.
+    •	Local Store is set
+    •	Product stock is not change
+    
+  ### POM.XML is used to load the dependencies
+  #### Please download the supporting chrome web driver from the following site and place in the drivers folder
+  https://chromedriver.chromium.org/downloads
+  
+  
