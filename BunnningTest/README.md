@@ -1,7 +1,7 @@
-#Testing Challenge 1 - Automation Test Analyst
+# Testing Challenge 1 - Automation Test Analyst
 A testing challenge to be solved as part of a screening process
 
-#Context
+# Context
 You are the quality analyst / engineer for a team at Bunnings.
 You are retrofitting some testing procedures on the now live website.
 Challenge
@@ -11,17 +11,17 @@ List down any assumptions and questions you have about the brief
 Design and document test cases for this feature as it appears on the site
 Apply test automation to this feature outline the approach and tools you will use _
 Write test automation scripts for your top 3 test cases
-#Deliverables:
+# Deliverables:
 Spend as little or as much time as you like ⌚ on the challenge, please record the total time you spend on this and include it in your response
 The code you produce can be in any language ⭐
 If you complete the automation part of the challenge output of the efforts ❗ must be committed back into a Public Repo(created by you) in Github and the URL shared back for review.
 
 # Bunning Search feature automation Challenge is done using 
-    ### Java
-    ### Cucumber
-    ### Selenium
-    ### Junit
-    ### chrome webdriver
+    • Java
+    • Cucumber
+    • Selenium
+    • Junit
+    • chrome webdriver
  ## Following test cases automated using BDD
   
   ### Scenario: Search for product category
