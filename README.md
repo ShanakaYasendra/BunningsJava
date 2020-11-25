@@ -46,18 +46,24 @@ If you complete the automation part of the challenge output of the efforts ❗ m
     Then results page should load
     And results page should display "494 results for keys"
     And "Services" Tab should display with results
-    And "Services" Tab heading should display "Services (2)"
+    And "Services" Tab heading should display "Services(2)"
+    And "Our Range" Tab heading should display "Our Range(472)"
+    And "D.I.Y. Advice" Tab heading should display "D.I.Y. Advice(15)"
+    And "Other" Tab heading should display "Other(5)"
     And close the Browser
 
 
   ### Scenario: Search for DIY Advice
-    Given Customer is on the Bunning Web site
+     Given Customer is on the Bunning Web site
     When Customer enter "Key" to the search input
     And select "D.I.Y. Advice" from the drop down
     Then results page should load
     And results page should display "494 results for keys"
     And "D.I.Y. Advice" Tab should display with results
-    And "D.I.Y. Advice" Tab heading should display "D.I.Y. Advice (15)"
+    And "D.I.Y. Advice" Tab heading should display "D.I.Y. Advice(15)"
+    And "Services" Tab heading should display "Services(2)"
+    And "Our Range" Tab heading should display "Our Range(472)"
+    And "Other" Tab heading should display "Other(5)"
     And close the Browser
     
   ## Following Assumption used in the Automation
